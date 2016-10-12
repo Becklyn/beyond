@@ -1,0 +1,35 @@
+// region Color palette 
+// Primary Colors
+$color-primary: #1c57e1;
+$color-light: #fff;
+$color-medium: #f3f3f3;
+$color-dark: #1e1b1b;
+
+// Secondary Colors
+$color-red: #f84135;
+$color-green: #53d03c;
+$color-dark-gray: #c6c5c5;
+// endregion
+
+
+// region App Colors
+// Text
+$color-text: $color-dark;
+$color-text-inverted: $color-light;
+
+// Background
+$color-background: $color-light;
+$color-background-sidebar: $color-medium;
+
+// Action Colors
+$color-add: $color-green;
+$color-delete: $color-red;
+
+// Status Colors
+$color-success: $color-green;
+$color-error: $color-red;
+
+// Main Navigation
+$main-navigation-foreground: $color-text-inverted;
+$main-navigation-background: $color-primary;
+// endregion
