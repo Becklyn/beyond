@@ -1,0 +1,11 @@
+{
+    "name": "beyond-framework",
+    "version": "0.0.1",
+    "description": "Layout framework used by Becklyn",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Becklyn/beyond.git"
+    },
+    "homepage": "https://github.com/Becklyn/beyond",
+    "license": "BSD-3-Clause"
+}
