@@ -1,6 +1,6 @@
 {
     "name": "beyond-framework",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Layout framework used by Becklyn",
     "repository": {
         "type": "git",
