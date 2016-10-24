@@ -10,5 +10,8 @@
   "license": "BSD-3-Clause",
   "devDependencies": {
     "kaba": "^1.1.1"
+  },
+  "dependencies": {
+    "samos": "git@github.com:Becklyn/samos.git#232606fe29142fb0ad64ce3dc2a652c14b0a20a5"
   }
 }
