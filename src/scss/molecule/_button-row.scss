@@ -1,0 +1,13 @@
+@import "../helper/mixin";
+
+.button-row {
+    @include clearfix;
+
+    + .button-row {
+        margin-top: 2rem;
+    }
+
+    .button {
+        float: left;
+    }
+}
