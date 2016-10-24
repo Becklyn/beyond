@@ -1,0 +1,83 @@
+@import "../helper/variables";
+@import "../helper/mixin";
+
+.alert {
+    font-size: 1.2rem;
+    padding: 1.7rem 4rem 1.7rem 1.7rem;
+    border-radius: 5px;
+    float: right;
+    clear: right;
+    max-width: calc(100% - 4rem);
+    margin-right: 2rem;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    background-color: lighten($color-primary, 45%);
+
+    + .alert {
+        margin-top: 2rem;
+    }
+
+    a {
+        font-weight: 700;
+        color: $color-primary;
+    }
+
+    &.alert-info {
+        border: 1px solid $color-info;
+        color: $color-info;
+        background-color: lighten($color-info, 45%);
+
+        a {
+            color: $color-info;
+        }
+    }
+
+    &.alert-success {
+        $color: darken($color-success, 10%);
+
+        border: 1px solid $color;
+        color: $color;
+        background-color: lighten($color-success, 40%);
+
+        a {
+            color: $color;
+        }
+    }
+
+    &.alert-warning {
+        border: 1px solid $color-warning;
+        color: $color-warning;
+        background-color: lighten($color-warning, 45%);
+
+        a {
+            color: $color-warning;
+        }
+    }
+
+    &.alert-error {
+        border: 1px solid $color-error;
+        color: $color-error;
+        background-color: lighten($color-error, 35%);
+
+        a {
+            color: $color-error;
+        }
+    }
+
+    .close {
+        @include invisible-button;
+        position: relative;
+        height: 1rem;
+        top: -1rem;
+        right: -3rem;
+        color: inherit;
+        float: right;
+        font-weight: 700;
+        font-size: 2.4rem;
+        opacity: .5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

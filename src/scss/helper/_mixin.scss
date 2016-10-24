@@ -4,3 +4,10 @@
     font-family: 'Roboto Mono', monospace;
     font-weight: 500;
 }
+
+@mixin invisible-button {
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}

@@ -1,4 +1,4 @@
-// region Color palette 
+// region Color palette
 // Primary Colors
 $color-primary: #1c57e1;
 $color-light: #fff;
@@ -9,6 +9,8 @@ $color-dark: #1e1b1b;
 $color-red: #f84135;
 $color-green: #53d03c;
 $color-dark-gray: #c6c5c5;
+$color-violet: #7559A3;
+$color-yellow: #A37730;
 // endregion
 
 
@@ -28,6 +30,8 @@ $color-delete: $color-red;
 // Status Colors
 $color-success: $color-green;
 $color-error: $color-red;
+$color-info: $color-violet;
+$color-warning: $color-yellow;
 
 // Main Navigation
 $main-navigation-foreground: $color-text-inverted;
