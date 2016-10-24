@@ -3,6 +3,7 @@
 
 .button {
     @include default-font;
+    @include invisible-button;
     display: inline-block;
     font-size: 1.4rem;
     text-decoration: none;
@@ -14,6 +15,49 @@
     color: $color-text;
     background-color: $color-light;
     border: 1px solid $color-dark-gray;
+
+    &.disabled,
+    &:disabled {
+        opacity: .25;
+        cursor: default;
+    }
+
+    &:hover:not([disabled]):not(.disabled) {
+        background-color: $color-medium;
+    }
+
+    &.button-primary {
+        color: $color-text-inverted;
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+
+        &:hover:not([disabled]):not(.disabled) {
+            color: $color-primary;
+            background-color: $color-light;
+        }
+    }
+
+    &.button-add {
+        color: $color-text-inverted;
+        background-color: $color-add;
+        border: 1px solid $color-add;
+
+        &:hover:not([disabled]):not(.disabled) {
+            color: $color-add;
+            background-color: $color-light;
+        }
+    }
+
+    &.button-delete {
+        color: $color-text-inverted;
+        background-color: $color-delete;
+        border: 1px solid $color-delete;
+
+        &:hover:not([disabled]):not(.disabled) {
+            color: $color-delete;
+            background-color: $color-light;
+        }
+    }
 
     &.mini {
         font-size: 1.1rem;
@@ -31,53 +75,6 @@
         font-size: 1.6rem;
         padding: 2rem;
         min-width: 19rem;
-    }
-
-    &.disabled,
-    &:disabled {
-        opacity: .25;
-        cursor: default;
-    }
-
-    &:hover:not([disabled]):not(.disabled) {
-        background-color: $color-medium;
-    }
-
-    &:focus {
-        outline: 0;
-    }
-}
-
-.button-primary {
-    color: $color-text-inverted;
-    background-color: $color-primary;
-    border: 1px solid $color-primary;
-
-    &:hover:not([disabled]):not(.disabled) {
-        color: $color-primary;
-        background-color: $color-light;
-    }
-}
-
-.button-add {
-    color: $color-text-inverted;
-    background-color: $color-add;
-    border: 1px solid $color-add;
-
-    &:hover:not([disabled]):not(.disabled) {
-        color: $color-add;
-        background-color: $color-light;
-    }
-}
-
-.button-delete {
-    color: $color-text-inverted;
-    background-color: $color-delete;
-    border: 1px solid $color-delete;
-
-    &:hover:not([disabled]):not(.disabled) {
-        color: $color-delete;
-        background-color: $color-light;
     }
 }
 
