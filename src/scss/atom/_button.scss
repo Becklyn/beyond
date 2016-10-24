@@ -19,7 +19,7 @@
     &.disabled,
     &:disabled {
         opacity: .25;
-        cursor: default;
+        cursor: not-allowed;
     }
 
     &:hover:not([disabled]):not(.disabled) {
@@ -29,7 +29,7 @@
     &.button-primary {
         color: $color-text-inverted;
         background-color: $color-primary;
-        border: 1px solid $color-primary;
+        border-color: $color-primary;
 
         &:hover:not([disabled]):not(.disabled) {
             color: $color-primary;
@@ -40,7 +40,7 @@
     &.button-add {
         color: $color-text-inverted;
         background-color: $color-add;
-        border: 1px solid $color-add;
+        border-color: $color-add;
 
         &:hover:not([disabled]):not(.disabled) {
             color: $color-add;
@@ -51,7 +51,7 @@
     &.button-delete {
         color: $color-text-inverted;
         background-color: $color-delete;
-        border: 1px solid $color-delete;
+        border-color: $color-delete;
 
         &:hover:not([disabled]):not(.disabled) {
             color: $color-delete;
