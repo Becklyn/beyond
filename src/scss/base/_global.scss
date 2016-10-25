@@ -8,7 +8,10 @@ html {
     font-size: 62.5%;
 }
 
-body,
-a {
+body {
     @include default-font;
+}
+
+a {
+    font-family: inherit;
 }
