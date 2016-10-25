@@ -1,0 +1,45 @@
+@import "../helper/variables";
+
+.progress {
+    position: relative;
+    height: 4px;
+    width: 400px;
+    background-color: $color-medium;
+    margin-top: 4rem;
+
+    span {
+        position: relative;
+        display: block;
+        height: 100%;
+        background-color: $color-primary;
+        transition: width 1s;
+    }
+
+    aside {
+        position: absolute;
+        top: -2.3rem;
+        font-size: 1.6rem;
+        color: $color-primary;
+        right: 0;
+    }
+
+    &.progress-success {
+        span {
+            background-color: $color-success;
+        }
+
+        aside {
+            color: $color-success;
+        }
+    }
+
+    &.progress-error {
+        span {
+            background-color: $color-error;
+        }
+
+        aside {
+            color: $color-error;
+        }
+    }
+}
