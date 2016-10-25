@@ -17,7 +17,7 @@
     border: 1px solid $color-dark-gray;
 
     &.disabled,
-    &:disabled {
+    &[disabled] {
         opacity: .25;
         cursor: not-allowed;
     }
