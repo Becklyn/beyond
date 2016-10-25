@@ -2,7 +2,6 @@
 @import "../helper/mixin";
 
 .button {
-    @include default-font;
     @include invisible-button;
     display: inline-block;
     font-size: 1.4rem;
