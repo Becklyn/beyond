@@ -1,0 +1,182 @@
+@import "../helper/variables";
+@import "../helper/mixin";
+
+.form {
+    $label-width: 25rem;
+
+    .form-row {
+        width: 100%;
+
+        + .form-row {
+            margin-top: 20px;
+        }
+    }
+
+    .form-group {
+        @include clearfix;
+
+        > * {
+            float: left;
+        }
+
+        > .form-control,
+        > .input-group {
+            width: calc(100% - #{$label-width});
+        }
+    }
+
+    .form-label {
+        position: relative;
+        text-align: right;
+        display: inline-block;
+        width: $label-width;
+        padding: 1.7rem 2rem;
+
+        &.required {
+            padding-right: 4rem;
+
+            &::after {
+                content: "\002a";
+                position: absolute;
+                right: 2rem;
+                top: 1.4rem;
+            }
+        }
+    }
+
+    .input-group {
+        position: relative;
+        display: flex;
+
+        .form-control {
+            flex: 1;
+        }
+    }
+
+    .input-group-addon {
+        display: table-cell;
+        padding: 1.7rem 2rem;
+        line-height: 1;
+        text-align: center;
+        min-width: 0;
+
+        &:not(.button) {
+            background-color: $color-dark-gray;
+            color: $color-text;
+        }
+    }
+
+    .form-control {
+        padding: 1.6rem;
+        border: 1px solid $color-dark-gray;
+        border-radius: 0;
+        background-color: $color-light;
+
+        &:focus,
+        &.has-focus {
+            outline: 0;
+            border-color: $color-primary;
+        }
+    }
+
+    .form-error {
+        color: $color-error;
+        width: 100%;
+
+        ul {
+            margin-left: $label-width;
+            list-style: none;
+        }
+
+        li {
+            margin-top: 1rem;
+        }
+    }
+
+    .has-error {
+        border-color: $color-error;
+    }
+
+    select {
+        display: none;
+    }
+
+    .dropdown {
+        &:focus {
+            border-color: $color-primary;
+        }
+
+        .option-container {
+            border: 1px solid $color-primary;
+            background-color: $color-light;
+        }
+
+        .option {
+            + .option {
+                border-top: 1px solid $color-dark-gray;
+            }
+
+            &:hover,
+            &.is-selected {
+                background-color: $color-primary;
+                color: $color-text-inverted;
+            }
+        }
+    }
+
+    .disabled,
+    [disabled] {
+        opacity: .25;
+        cursor: not-allowed;
+
+        + label {
+            opacity: .25;
+            cursor: not-allowed;
+        }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        display: none;
+
+        + label {
+            position: relative;
+            padding-left: 2.3rem;
+        }
+    }
+
+    input[type="checkbox"] + label::before,
+    input[type="radio"] + label::before {
+        border: 1px solid $color-text;
+        content: "";
+        display: inline-block;
+        width: 1.4rem;
+        height: 1.4rem;
+        position: absolute;
+        left: 0;
+        top: .1rem;
+    }
+
+    input[type="radio"] + label::before {
+        border-radius: 50%;
+    }
+
+    input[type="checkbox"]:checked + label::before,
+    input[type="radio"]:checked + label::before {
+        background: $color-text;
+    }
+
+    input[type="checkbox"]:checked + label::before {
+        box-shadow:
+            2px 2px 0 $color-text-inverted inset,
+            -2px -2px 0 $color-text-inverted inset;
+    }
+
+    input[type="radio"]:checked + label::before {
+        box-shadow:
+            2px 2px 0 $color-text-inverted inset,
+            -2px -2px 0 $color-text-inverted inset,
+            -2px 2px 0 $color-text-inverted inset,
+            2px -2px 0 $color-text-inverted inset;
+    }
+}
