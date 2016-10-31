@@ -1,0 +1,47 @@
+@import "../helper/variables";
+
+.dropdown {
+    position: relative;
+    min-height: 5rem;
+    padding-right: 5rem;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 7px;
+        background-color: $color-text;
+        top: 2.3rem;
+    }
+
+    &::before {
+        right: 2.8rem;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        right: 2.3rem;
+        transform: rotate(-45deg);
+    }
+
+    &.is-active {
+        .option-container {
+            display: block;
+        }
+    }
+
+    .option-container {
+        display: none;
+        width: calc(100% + 2px);
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        z-index: 1;
+    }
+
+    .option {
+        padding: 1.7rem 2rem;
+    }
+}
