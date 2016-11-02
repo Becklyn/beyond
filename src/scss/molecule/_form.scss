@@ -97,6 +97,12 @@
         border-color: $color-error;
     }
 
+    .help-text {
+        margin-left: $label-width;
+        margin-top: 1rem;
+        color: $color-dark-gray;
+    }
+
     select {
         display: none;
     }
