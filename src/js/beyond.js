@@ -1,5 +1,4 @@
-"use strict";
-
+import $ from "jQuery";
 import Select from "./beyond/select";
 
 $("select").each((index, domElement) =>
