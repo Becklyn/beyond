@@ -3,7 +3,7 @@ import $ from "jQuery";
 class Select
 {
     /**
-     * @param {HTMLElement} domElement
+     * @param {jQuery|HTMLElement|string} domElement
      */
     constructor (domElement)
     {
@@ -13,7 +13,7 @@ class Select
         this.$originalSelect = $(domElement);
 
         /**
-         * @type {jquery[]}
+         * @type {jQuery[]}
          */
         this.$originalOptions = this.$originalSelect.find("option");
 
@@ -26,7 +26,7 @@ class Select
         });
 
         /**
-         * @type {jquery[]}
+         * @type {jQuery[]}
          */
         this.$virtualOptions = [];
 
@@ -55,7 +55,7 @@ class Select
      */
     initialize ()
     {
-        this.$originalOptions.each((i, domElement) => this.generateOption(i, domElement));
+        this.$originalOptions.each((i, domElement) => this.generateOption(domElement));
 
         this.$virtualOptions = this.$optionContainer.find(".option");
 
@@ -99,10 +99,9 @@ class Select
     /**
      * generate option
      *
-     * @param {number} i
      * @param {HTMLElement} domElement
      */
-    generateOption (i, domElement)
+    generateOption (domElement)
     {
         const $element = $(domElement);
 
@@ -122,7 +121,7 @@ class Select
     {
         const $currentSelectedOptions = this.$originalSelect.find("option:selected");
 
-        let values = [];
+        const values = [];
 
         this.$virtualOptions.removeClass("is-selected");
         this.$virtualOptions.each((i, element) => {
@@ -180,20 +179,15 @@ class Select
 
         this.$virtualOptions.each((i, virtualElement) => {
             const $virtualElement = $(virtualElement);
+            const virtualElementValue = $virtualElement.data("value");
+            const isVirtualElementSelected = $virtualElement.hasClass("is-selected");
 
             this.$originalOptions.each((j, domElement) => {
                 const $domElement = $(domElement);
 
-                if ($virtualElement.data("value") === $domElement.attr("value"))
+                if (virtualElementValue === $domElement.attr("value"))
                 {
-                    if ($virtualElement.hasClass("is-selected"))
-                    {
-                        $domElement.prop("selected", true);
-                    }
-                    else
-                    {
-                        $domElement.prop("selected", false);
-                    }
+                    $domElement.prop("selected", isVirtualElementSelected);
                 }
             });
         });
