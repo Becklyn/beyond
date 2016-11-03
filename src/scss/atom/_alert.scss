@@ -7,8 +7,6 @@
     border-radius: 5px;
     float: right;
     clear: right;
-    max-width: calc(100% - 4rem);
-    margin-right: 2rem;
     border: 1px solid $color-primary;
     color: $color-primary;
     background-color: lighten($color-primary, 45%);
@@ -68,7 +66,7 @@
         @include invisible-button;
         position: relative;
         height: 1rem;
-        top: -0.7rem;
+        top: -.7rem;
         right: -3rem;
         color: inherit;
         float: right;
