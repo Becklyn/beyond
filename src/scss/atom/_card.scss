@@ -30,11 +30,13 @@
     }
 
     &:hover,
-    &.selected {
+    &.selected,
+    &.sortable-chosen {
         border-color: $color-primary;
     }
 
-    &.selected {
+    &.selected,
+    &.sortable-chosen {
         box-shadow: inset 2rem 0 0 $color-primary;
     }
 
@@ -47,6 +49,11 @@
     &-title,
     &-subtitle {
         margin-bottom: .7rem;
+    }
+
+    .sortable-ghost {
+        opacity: .4;
+        background-color: #F4E2C9;
     }
 
     .card-content {
