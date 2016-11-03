@@ -1,0 +1,125 @@
+@import "../helper/variables";
+@import "../helper/mixin";
+
+.card {
+    @include light-font;
+    @include clearfix;
+    position: relative;
+    margin: 1.2rem;
+    padding: 2.5rem 2rem 2.5rem 4rem;
+    width: 45rem;
+    font-size: 1rem;
+    color: $color-dark-gray;
+    border: .1rem solid $color-dark-gray;
+    background: $color-light;
+    box-shadow: inset 1.5rem 0 0 $color-dark-gray;
+
+    &::before {
+        content: "\22EE";
+        position: absolute;
+        top: calc(50% - 3.3rem);
+        left: 0;
+        width: 1.5rem;
+        height: 6.6rem;
+        line-height: 6.6rem;
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+        color: $color-light;
+        cursor: move;
+    }
+
+    &:hover,
+    &.selected {
+        border-color: $color-primary;
+    }
+
+    &.selected {
+        box-shadow: inset 1.5rem 0 0 $color-primary;
+    }
+
+    &-title {
+        @include default-font;
+        font-size: 1.2rem;
+        color: $color-dark;
+    }
+
+    &-title,
+    &-subtitle {
+        margin-bottom: .7rem;
+    }
+
+    .card-content {
+        display: inline-block;
+        width: 75%;
+        float: left;
+
+        li {
+            list-style: none;
+        }
+
+        .info-content {
+            @include light-font;
+        }
+
+        .info-category {
+            @include bold-font;
+        }
+    }
+
+    .card-action {
+        display: inline-block;
+        width: 20%;
+        float: right;
+        font-size: 1.7rem;
+        color: $color-dark;
+        cursor: default;
+
+        .action {
+            &-new,
+            &-edit,
+            &-delete {
+                @include icon-font;
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+
+                &:hover {
+                    color: $color-primary;
+
+                    .action-info {
+                        display: block;
+                    }
+                }
+
+                .action-info {
+                    @include default-font;
+                    display: none;
+                    position: absolute;
+                    top: -3rem;
+                    left: -6rem;
+                    width: 12rem;
+                    background: $color-primary;
+                    font-size: 1rem;
+                    color: $color-light;
+                    text-align: center;
+                    white-space: nowrap;
+                    padding: .5rem 1rem;
+                    border-radius: .5rem;
+
+                    &::before {
+                        position: absolute;
+                        top: 2rem;
+                        left: 6rem;
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-left: .6rem solid transparent;
+                        border-right: .6rem solid transparent;
+                        border-top: .6rem solid $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}

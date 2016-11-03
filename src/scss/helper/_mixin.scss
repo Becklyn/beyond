@@ -4,3 +4,18 @@
     font-family: 'Roboto Mono', monospace;
     font-weight: 500;
 }
+
+@mixin light-font {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+}
+
+@mixin bold-font {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 900;
+}
+
+@mixin icon-font {
+    font-family: 'FontAwesome';
+    font-weight: 100;
+}
