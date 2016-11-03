@@ -6,20 +6,20 @@
     @include clearfix;
     position: relative;
     margin: 1.2rem;
-    padding: 2.5rem 2rem 2.5rem 4rem;
+    padding: 2.5rem 2rem 2.5rem 4.5rem;
     width: 45rem;
     font-size: 1rem;
     color: $color-dark-gray;
     border: .1rem solid $color-dark-gray;
     background: $color-light;
-    box-shadow: inset 1.5rem 0 0 $color-dark-gray;
+    box-shadow: inset 2rem 0 0 $color-dark-gray;
 
     &::before {
         content: "\22EE";
         position: absolute;
         top: calc(50% - 3.3rem);
         left: 0;
-        width: 1.5rem;
+        width: 2rem;
         height: 6.6rem;
         line-height: 6.6rem;
         font-size: 2rem;
@@ -35,7 +35,7 @@
     }
 
     &.selected {
-        box-shadow: inset 1.5rem 0 0 $color-primary;
+        box-shadow: inset 2rem 0 0 $color-primary;
     }
 
     &-title {

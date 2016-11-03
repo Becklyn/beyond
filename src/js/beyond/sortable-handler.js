@@ -29,7 +29,7 @@ class SortableHandler
         }
 
         new Sortable(this.$container[0], {
-            animation: 150
+            animation: 150,
         });
     }
 }
