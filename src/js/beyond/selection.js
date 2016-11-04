@@ -38,10 +38,9 @@ class Selection
      */
     toggleSelection (event)
     {
-        $(event.currentTarget).parent()
-            .children()
+        $(event.currentTarget).siblings()
             .removeClass("selected");
-        $(event.currentTarget).toggleClass("selected");
+        $(event.currentTarget).addClass("selected");
     }
 }
 
