@@ -7,6 +7,7 @@
     position: absolute;
     display: inline-block;
     min-width: 12rem;
+    z-index: $layer-tooltip;
 
     .tooltip-inner {
         max-width: 200px;
@@ -25,7 +26,7 @@
     }
 
     &.top {
-        margin-top: -3px;
+        bottom: 100%;
         padding: $tooltip-arrow-width 0;
 
         .tooltip-arrow {
@@ -38,7 +39,7 @@
     }
 
     &.right {
-        margin-left: 3px;
+        left: 100%;
         padding: 0 $tooltip-arrow-width;
 
         .tooltip-arrow {
@@ -51,7 +52,7 @@
     }
 
     &.bottom {
-        margin-top: 3px;
+        top: 100%;
         padding: $tooltip-arrow-width 0;
 
         .tooltip-arrow {
@@ -64,7 +65,7 @@
     }
 
     &.left {
-        margin-left: -3px;
+        right: 100%;
         padding: 0 $tooltip-arrow-width;
 
         .tooltip-arrow {
@@ -74,6 +75,18 @@
             border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
             border-left-color: $tooltip-color;
         }
+    }
+
+    &.left,
+    &.right {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &.top,
+    &.bottom {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
