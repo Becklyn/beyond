@@ -6,38 +6,42 @@ import $ from "jQuery";
 class ToggleType
 {
     /**
-     * @param {string} uid
-     * @param {string} attachment
+     * @param {{}} data
      */
-    constructor (uid, attachment = "bottom")
+    constructor (data)
     {
         /**
          * @private
-         * @type {string}
+         * @type {string[]}
          */
-        this.uid = uid;
+        this.requiredProperties = [];
 
         /**
          * @private
-         * @type {string}
+         * @type {{}}
          */
-        this.attachment = attachment;
+        this.data = data;
+
+        this.checkRequiredData();
     }
 
     /**
-     * @returns {string}
+     * @param key
+     * @returns {*}
      */
-    getUid ()
+    getData (key)
     {
-        return this.uid;
+        return this.data[key];
     }
 
-    /**
-     * @returns {string}
-     */
-    getAttachment ()
+    checkRequiredData ()
     {
-        return this.attachment;
+        this.requiredProperties.forEach((requiredProperty) => {
+            if (!this.data.hasOwnProperty(requiredProperty))
+            {
+                throw new Error(`required 'data-${requiredProperty}' attribute is missing.`);
+            }
+        });
     }
 
     /**
@@ -48,9 +52,9 @@ class ToggleType
         const text = "no template set for given toggleType";
 
         const $tooltip = $("<div>", {
-            class: `tooltip ${this.attachment}`,
+            class: `tooltip ${this.getData("attachment")}`,
             role: "tooltip",
-            "data-uid": this.getUid(),
+            "data-uid": this.getData("uid"),
         });
 
         const $tooltipArrow = $("<div>", {

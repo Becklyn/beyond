@@ -1,5 +1,5 @@
 import $ from "jQuery";
-import ToggleType from "./toggle-type";
+import ToggleType from "../toggle-type";
 
 /**
  *
@@ -11,13 +11,13 @@ class Tooltip extends ToggleType
      */
     getTemplate ()
     {
-        const attachment = this.getAttachment();
-        const text = `Tooltip ${attachment}`;
+        const attachment = this.getData("attachment");
+        const text = this.getData("text");
 
         const $tooltip = $("<div>", {
             class: `tooltip ${attachment}`,
             role: "tooltip",
-            "data-uid": this.getUid(),
+            "data-uid": this.getData("uid"),
         });
 
         const $tooltipArrow = $("<div>", {
