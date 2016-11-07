@@ -1,5 +1,5 @@
 import $ from "jQuery";
-import ToggleType from "./toggleType";
+import ToggleType from "./toggle-type";
 
 /**
  *

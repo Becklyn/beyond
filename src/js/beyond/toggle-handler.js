@@ -1,5 +1,5 @@
 import $ from "jQuery";
-import ToggleCollection from "./toggleCollection";
+import ToggleCollection from "./toggle-collection";
 import Tooltip from "./tooltip";
 
 /**
@@ -83,7 +83,7 @@ class ToggleHandler
             const emitterUid = $emitter.data("uid");
             const toggleAttachment = $emitter.data("attachment");
 
-            if (desiredToggleType in this.$toggleEmitter)
+            if (this.toggleTypes.hasOwnProperty(desiredToggleType))
             {
                 this.toggleCollection.add(emitterUid, new this.toggleTypes[desiredToggleType](emitterUid, toggleAttachment));
             }
@@ -112,4 +112,4 @@ class ToggleHandler
     }
 }
 
-export default ToggleHandler;
+export default new ToggleHandler();

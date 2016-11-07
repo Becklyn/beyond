@@ -1,3 +1,1 @@
-import ToggleHandler from "./beyond/toggleHandler";
-
-const toggleHandler = new ToggleHandler();
+import "./beyond/toggle-handler";
