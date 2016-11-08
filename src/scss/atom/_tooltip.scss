@@ -4,10 +4,8 @@
     $tooltip-arrow-width: 5px;
     $tooltip-color: $color-primary;
 
-    position: absolute;
     display: inline-block;
     min-width: 12rem;
-    z-index: $layer-tooltip;
 
     .tooltip-inner {
         max-width: 200px;
@@ -18,7 +16,8 @@
         border-radius: 5px;
     }
 
-    .tooltip-arrow {
+    &::after {
+        content: "";
         position: absolute;
         width: 0;
         height: 0;
@@ -26,10 +25,11 @@
     }
 
     &.top {
-        bottom: 100%;
-        padding: $tooltip-arrow-width 0;
+        margin-top: -3px;
+        padding: 0 0 $tooltip-arrow-width 0;
+        transform: translate(-50%, -100%);
 
-        .tooltip-arrow {
+        &::after {
             bottom: 0;
             left: 50%;
             margin-left: -$tooltip-arrow-width;
@@ -39,10 +39,11 @@
     }
 
     &.right {
-        left: 100%;
-        padding: 0 $tooltip-arrow-width;
+        margin-left: 3px;
+        padding: 0 0 0 $tooltip-arrow-width;
+        transform: translateY(-50%);
 
-        .tooltip-arrow {
+        &::after {
             top: 50%;
             left: 0;
             margin-top: -$tooltip-arrow-width;
@@ -52,10 +53,11 @@
     }
 
     &.bottom {
-        top: 100%;
-        padding: $tooltip-arrow-width 0;
+        margin-top: 3px;
+        padding: $tooltip-arrow-width 0 0 0;
+        transform: translateX(-50%);
 
-        .tooltip-arrow {
+        &::after {
             top: 0;
             left: 50%;
             margin-left: -$tooltip-arrow-width;
@@ -65,28 +67,17 @@
     }
 
     &.left {
-        right: 100%;
-        padding: 0 $tooltip-arrow-width;
+        margin-left: -3px;
+        padding: 0 $tooltip-arrow-width 0 0;
+        transform: translate(-100%, -50%);
 
-        .tooltip-arrow {
+        &::after {
             top: 50%;
             right: 0;
             margin-top: -$tooltip-arrow-width;
             border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
             border-left-color: $tooltip-color;
         }
-    }
-
-    &.left,
-    &.right {
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    &.top,
-    &.bottom {
-        left: 50%;
-        transform: translateX(-50%);
     }
 }
 
