@@ -1,0 +1,46 @@
+@import "../helper/variables";
+@import "../helper/mixin";
+
+.tabs {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    position: relative;
+
+    li,
+    .tab {
+        flex: 1;
+        cursor: pointer;
+        list-style: none;
+
+        a {
+            display: block;
+            text-align: center;
+            padding: 1rem 0;
+            color: $color-text;
+            text-decoration: none;
+        }
+    }
+
+    .nav-underline {
+        position: absolute;
+        height: 1rem;
+        left: 0;
+        bottom: 0;
+        border-bottom: .2rem solid $color-primary;
+        z-index: -1;
+    }
+}
+
+.all-tab-content {
+    max-width: 60rem;
+
+    .tab-content {
+        display: none;
+
+        &.is_opened {
+            display: block;
+        }
+    }
+}
