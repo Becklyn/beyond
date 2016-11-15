@@ -1,0 +1,100 @@
+@import "../helper/variables";
+@import "../helper/mixin";
+
+.login {
+    width: 140rem;
+    height: 80rem;
+    position: relative;
+
+    .login-teaser,
+    .login-form {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-teaser {
+        right: 50%;
+        left: 0;
+        background: url("../img/teaser.png") no-repeat center center;
+        background-size: cover;
+    }
+
+    .login-form {
+        right: 0;
+        left: 50%;
+        color: $color-text-inverted;
+        text-align: center;
+        background-color: $color-primary;
+
+        .logo {
+            margin-bottom: 8rem;
+        }
+
+        .input-group {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        a {
+            width: 100%;
+            color: $color-text-inverted;
+            text-decoration: none;
+        }
+
+        button {
+            margin: 1rem 0 3rem;
+        }
+
+        .form {
+            input,
+            button {
+                width: 42rem;
+            }
+
+            input[type="checkbox"] + label::before,
+            input[type="radio"] + label::before {
+                border-color: $color-text-inverted;
+            }
+
+            input[type="checkbox"]:checked + label::before,
+            input[type="radio"]:checked + label::before {
+                background: $color-text-inverted;
+            }
+
+            input[type="checkbox"]:checked + label::before {
+                box-shadow: 2px 2px 0 $color-primary inset,
+                -2px -2px 0 $color-primary inset;
+            }
+
+            input[type="radio"]:checked + label::before {
+                box-shadow: 2px 2px 0 $color-primary inset,
+                -2px -2px 0 $color-primary inset,
+                -2px 2px 0 $color-primary inset,
+                2px -2px 0 $color-primary inset;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                outline: none;
+                border: 0;
+                height: 5rem;
+                padding: 2rem 0 0 1rem;
+            }
+
+            .input-group {
+                .inset {
+                    position: absolute;
+                    top: 1rem;
+                    left: 1rem;
+                    color: $color-primary;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

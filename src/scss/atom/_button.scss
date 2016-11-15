@@ -33,6 +33,10 @@
             color: $color-primary;
             background-color: $color-light;
         }
+
+        &.button-login {
+            border: .1rem solid $color-light;
+        }
     }
 
     &.button-add {
