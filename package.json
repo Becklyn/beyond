@@ -12,6 +12,7 @@
     "kaba": "^1.1.1"
   },
   "dependencies": {
-    "samos": "git@github.com:Becklyn/samos.git#232606fe29142fb0ad64ce3dc2a652c14b0a20a5"
+    "samos": "git@github.com:Becklyn/samos.git#232606fe29142fb0ad64ce3dc2a652c14b0a20a5",
+    "mojave": "git@github.com:Becklyn/mojave.git#2232ca83746d1eca5a433d4887a6bb10a3dd888e"
   }
 }

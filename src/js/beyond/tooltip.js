@@ -1,5 +1,5 @@
 import $ from "jQuery";
-import Utility from "./utility";
+import Timing from "mojave/lib/timing/timing";
 
 /**
  * Tooltip
@@ -57,7 +57,7 @@ class Tooltip
         this.$emitter
             .on("mouseenter mouseleave", () => this.toggleTooltip());
 
-        $(window).on("resize", Utility.debounce(() => this.calculateOffset()));
+        $(window).on("resize scroll", Timing.debounce(() => this.checkForSufficientSpace(), 2000));
     }
 
     /**
