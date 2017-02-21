@@ -1,0 +1,27 @@
+@import "../helper/variables";
+
+.page-tree-node {
+    line-height: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+    fill: $color-text;
+    cursor: pointer;
+
+    &.node-home {
+        stroke: $color-text-inverted;
+        stroke-width: .25px;
+    }
+
+    &.node-link {
+        stroke: $color-text;
+        stroke-width: .25px;
+    }
+
+    svg {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin: 1.25rem 1.25rem 1.25rem .25rem;
+    }
+}

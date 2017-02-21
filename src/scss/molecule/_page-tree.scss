@@ -1,0 +1,64 @@
+@import "../helper/variables";
+
+.page-tree {
+    width: 100%;
+
+    ul {
+        display: none;
+        list-style: none;
+        width: 100%;
+    }
+
+    > ul {
+        display: block;
+    }
+
+    li {
+        position: relative;
+    }
+
+    li > ul {
+        padding-left: 4rem;
+    }
+
+    ul + .page-tree-expander {
+        display: block;
+    }
+
+    .page-tree-node:hover,
+    .page-tree-node.is-selected {
+        background-color: $color-primary;
+        fill: $color-text-inverted !important;
+        color: $color-text-inverted !important;
+
+        ~ .page-tree-expander {
+            background-color: $color-primary;
+            fill: $color-text-inverted;
+            color: $color-text-inverted;
+        }
+    }
+
+    .page-tree-expander:hover {
+        background-color: $color-primary;
+        fill: $color-text-inverted !important;
+        color: $color-text-inverted !important;
+    }
+
+    .is-expanded {
+        > ul {
+            display: block;
+        }
+
+        > .page-tree-expander svg {
+            transform: rotate(90deg);
+        }
+    }
+
+    .is-ancestor {
+        > .page-tree-node,
+        > .page-tree-expander {
+            color: $color-primary;
+            fill: $color-primary;
+        }
+    }
+}

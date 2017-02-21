@@ -1,0 +1,15 @@
+@import "../helper/mixin";
+
+.page-tree-expander {
+    @include invisible-button();
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+
+    svg {
+        height: 1.2rem;
+    }
+}
