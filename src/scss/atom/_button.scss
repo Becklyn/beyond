@@ -2,59 +2,64 @@
 @import "../helper/mixin";
 
 .button {
-    @include invisible-button;
     display: inline-block;
-    text-decoration: none;
+    font-size: 1.4rem;
     padding: 1.5rem;
     min-width: 17.5rem;
     text-align: center;
     cursor: pointer;
-    line-height: 1.2;
     color: $color-text;
     background-color: $color-light;
     border: 1px solid $color-dark-gray;
 
-    &.disabled,
+    &.is-disabled,
     &[disabled] {
         opacity: .25;
         cursor: not-allowed;
     }
 
-    &:hover:not([disabled]):not(.disabled) {
+    &.is-disabled,
+    &[disabled],
+    &:hover {
         background-color: $color-medium;
-    }
-
-    &.button-primary {
-        color: $color-text-inverted;
-        background-color: $color-primary;
-        border-color: $color-primary;
-
-        &:hover:not([disabled]):not(.disabled) {
-            color: $color-primary;
-            background-color: $color-light;
-        }
-    }
-
-    &.button-add {
-        color: $color-text-inverted;
-        background-color: $color-add;
-        border-color: $color-add;
-
-        &:hover:not([disabled]):not(.disabled) {
-            color: $color-add;
-            background-color: $color-light;
-        }
-    }
-
-    &.button-delete {
-        color: $color-text-inverted;
-        background-color: $color-delete;
-        border-color: $color-delete;
-
-        &:hover:not([disabled]):not(.disabled) {
-            color: $color-delete;
-            background-color: $color-light;
-        }
     }
 }
 
+.button-primary {
+    color: $color-text-inverted;
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    &.is-disabled,
+    &[disabled],
+    &:hover {
+        color: $color-primary;
+        background-color: $color-light;
+    }
+}
+
+.button-add {
+    color: $color-text-inverted;
+    background-color: $color-add;
+    border-color: $color-add;
+
+    &.is-disabled,
+    &[disabled],
+    &:hover {
+        color: $color-add;
+        background-color: $color-light;
+    }
+}
+
+.button-delete {
+    color: $color-text-inverted;
+    background-color: $color-delete;
+    border-color: $color-delete;
+
+    &.is-disabled,
+    &[disabled],
+    &:hover {
+        color: $color-delete;
+        background-color: $color-light;
+    }
+}
