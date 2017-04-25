@@ -1,18 +1,5 @@
-@import "../helper/mixin";
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-}
-
 body {
-    @include default-font;
-    font-size: 1.4rem;
-}
-
-a {
-    font-family: inherit;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 500;
+    font-size: 1.2rem;
 }

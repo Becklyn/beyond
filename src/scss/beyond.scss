@@ -1,8 +1,10 @@
+// load external assets
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:500,700");
+
 // reset
 @import "../../node_modules/samos/reset";
 
 // base
-@import "base/font";
 @import "base/global";
 
 // atom
