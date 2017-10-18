@@ -1,6 +1,11 @@
 @import "../helper/variables";
 @import "../helper/mixin";
 
+///
+/// Regular button classes
+///
+/// The :active must stand before the :disabled, as the button needs to stay disabled
+///
 .button {
     display: inline-block;
     font-size: 1.4rem;
@@ -13,13 +18,18 @@
     border: 1px solid $color-dark-gray;
 
     &.is-disabled,
-    &[disabled] {
+    &:disabled {
         opacity: .25;
         cursor: not-allowed;
     }
 
+    &:active,
+    &:active:hover:not(:disabled):not(.is-disabled) {
+        background-color: shade($color-medium, 10%);
+    }
+
     &.is-disabled,
-    &[disabled],
+    &:disabled,
     &:hover {
         background-color: $color-medium;
     }
@@ -30,8 +40,13 @@
     background-color: $color-primary;
     border-color: $color-primary;
 
+    &:active,
+    &:active:hover:not(:disabled):not(.is-disabled) {
+        background-color: tint($color-primary, 80%);
+    }
+
     &.is-disabled,
-    &[disabled],
+    &:disabled,
     &:hover {
         color: $color-primary;
         background-color: $color-light;
@@ -43,8 +58,13 @@
     background-color: $color-add;
     border-color: $color-add;
 
+    &:active,
+    &:active:hover:not(:disabled):not(.is-disabled) {
+        background-color: tint($color-add, 80%);
+    }
+
     &.is-disabled,
-    &[disabled],
+    &:disabled,
     &:hover {
         color: $color-add;
         background-color: $color-light;
@@ -56,8 +76,13 @@
     background-color: $color-delete;
     border-color: $color-delete;
 
+    &:active,
+    &:active:hover:not(:disabled):not(.is-disabled) {
+        background-color: tint($color-delete, 80%);
+    }
+
     &.is-disabled,
-    &[disabled],
+    &:disabled,
     &:hover {
         color: $color-delete;
         background-color: $color-light;
