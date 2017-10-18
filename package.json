@@ -4,6 +4,6 @@
         "kaba": "^2.0.2"
     },
     "dependencies": {
-        "samos": "Becklyn/samos#612b7cf66a7756522445abd17d46156fb9f50af8"
+        "samos": "Becklyn/samos#e0db952092c9e97a471c9f1d98380a0c22dc1a07"
     }
 }
