@@ -1,5 +1,5 @@
 @import "../helper/variables";
-@import "../helper/mixin";
+@import "../helper/mixins";
 
 ///
 /// Regular button classes
@@ -16,6 +16,7 @@
     color: $color-text;
     background-color: $color-light;
     border: 1px solid $color-dark-gray;
+    touch-action: manipulation;
 
     &.is-disabled,
     &:disabled {
@@ -55,36 +56,36 @@
 
 .button-add {
     color: $color-text-inverted;
-    background-color: $color-add;
-    border-color: $color-add;
+    background-color: $fg-add;
+    border-color: $fg-add;
 
     &:active,
     &:active:hover:not(:disabled):not(.is-disabled) {
-        background-color: tint($color-add, 80%);
+        background-color: tint($fg-add, 80%);
     }
 
     &.is-disabled,
     &:disabled,
     &:hover {
-        color: $color-add;
+        color: $fg-add;
         background-color: $color-light;
     }
 }
 
 .button-delete {
     color: $color-text-inverted;
-    background-color: $color-delete;
-    border-color: $color-delete;
+    background-color: $fg-delete;
+    border-color: $fg-delete;
 
     &:active,
     &:active:hover:not(:disabled):not(.is-disabled) {
-        background-color: tint($color-delete, 80%);
+        background-color: tint($fg-delete, 80%);
     }
 
     &.is-disabled,
     &:disabled,
     &:hover {
-        color: $color-delete;
+        color: $fg-delete;
         background-color: $color-light;
     }
 }

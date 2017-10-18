@@ -1,0 +1,53 @@
+@import "../helper/variables";
+
+.alert {
+    padding: 2rem 5.2rem 2rem 2rem;
+    border: .1rem solid currentColor;
+    border-radius: .5rem;
+    color: $color-text;
+    background-color: $color-medium;
+    position: relative;
+
+}
+
+.alert-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    // 2 * 2rem padding + 1.2rem for the width of the icon
+    width: 5.2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+        content: "×";
+        font-size: 2rem;
+    }
+}
+
+.alert-primary {
+    color: $fg-primary;
+    background-color: $bg-primary;
+}
+
+.alert-info {
+    color: $fg-info;
+    background-color: $bg-info;
+}
+
+.alert-success {
+    color: $fg-success;
+    background-color: $bg-success;
+}
+
+.alert-warning {
+    color: $fg-warning;
+    background-color: $bg-warning;
+}
+
+.alert-error {
+    color: $fg-error;
+    background-color: $bg-error;
+}

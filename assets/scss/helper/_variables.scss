@@ -1,4 +1,4 @@
-// region Color palette 
+// region Color palette
 // Primary Colors
 $color-primary: #1c57e1;
 $color-light: #fff;
@@ -11,7 +11,6 @@ $color-green: #53d03c;
 $color-dark-gray: #c6c5c5;
 // endregion
 
-
 // region App Colors
 // Text
 $color-text: $color-dark;
@@ -22,12 +21,20 @@ $color-background: $color-light;
 $color-background-sidebar: $color-medium;
 
 // Action Colors
-$color-add: $color-green;
-$color-delete: $color-red;
+$fg-add: $color-green;
+$fg-delete: $color-red;
 
 // Status Colors
-$color-success: $color-green;
-$color-error: $color-red;
+$fg-primary: $color-primary;
+$bg-primary: #dde6fb;
+$fg-success: $color-green;
+$bg-success: #d4f3ce;
+$fg-error: $color-red;
+$bg-error: #fee2e1;
+$fg-warning: #a37730;
+$bg-warning: #fbebd0;
+$fg-info: #7559a3;
+$bg-info: #f1eef6;
 
 // Main Navigation
 $main-navigation-foreground: $color-text-inverted;
