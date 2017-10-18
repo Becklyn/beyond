@@ -1,12 +1,12 @@
 const kaba = require("kaba");
 
 const js = kaba.shelf.js({
-    input: "src/js/",
-    output: "../../dist/js"
+    input: "assets/js/",
+    output: "../../preview/web/public/js"
 });
 const scss = kaba.shelf.scss({
-    input: "src/scss/",
-    output: "../../dist/css"
+    input: "assets/scss/",
+    output: "../../preview/web/public/css"
 });
 
 kaba.task("scss", scss);
