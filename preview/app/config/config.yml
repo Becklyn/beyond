@@ -26,5 +26,5 @@ twig:
 
 gluggi:
     css:
-        - "/public/beyond.css"
+        - "/public/css/beyond.css"
     js: []
