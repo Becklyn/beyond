@@ -1,0 +1,5 @@
+layout:
+    resource: "@GluggiBundle/Resources/config/routing.yml"
+    prefix: /
+
+

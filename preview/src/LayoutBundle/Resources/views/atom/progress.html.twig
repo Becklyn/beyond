@@ -1,0 +1,14 @@
+{% set classes = ["", "progress-success", "progress-error"] %}
+{% set values = ["0%", "1%", "25%", "99%", "100%" ] %}
+
+{% for class in classes %}
+    <div class="progress {{ class }}">
+        <span style="width: 50%;"><aside>50%</aside></span>
+    </div>
+{% endfor %}
+
+{% for value in values %}
+    <div class="progress">
+        <span style="width: {{ value }};"><aside>{{ value }}</aside></span>
+    </div>
+{% endfor %}

@@ -1,0 +1,30 @@
+imports:
+    - { resource: parameters.yml }
+
+# Parameters, that don't need to change between the machines
+parameters:
+    locale: de
+
+framework:
+    translator:      { fallbacks: ["%locale%"] }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    templating:
+        engines: ['twig']
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    http_method_override: true
+    assets: ~
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+
+gluggi:
+    css:
+        - "/public/beyond.css"
+    js: []

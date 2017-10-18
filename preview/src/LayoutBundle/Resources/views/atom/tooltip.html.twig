@@ -1,0 +1,10 @@
+{% set classes = ["top", "right", "bottom", "left"] %}
+
+{% for class in classes %}
+    <div style="position: relative; float: left; width: 200px; height: 100px;">
+        {# container only used to get a better view of position:absolute; elements #}
+        <div class='tooltip {{ class }}' role='tooltip'><div class='tooltip-arrow'></div><div class='tooltip-inner'>Tooltip {{ class }}</div></div>
+    </div>
+{% endfor %}
+
+

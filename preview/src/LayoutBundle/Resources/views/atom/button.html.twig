@@ -1,0 +1,45 @@
+{% set classes = ["","button-primary", "button-add", "button-delete"] %}
+
+<table>
+    <tr>
+        <th>.button</th>
+        <th>.button.button-primary</th>
+        <th>.button.button-add</th>
+        <th>.button.button-delete</th>
+        <th></th>
+    </tr>
+    <tr>
+        {% for class in classes %}
+            <td><button type="button" class="button {{ class }}">Button</button></td>
+        {% endfor %}
+        <th>button</th>
+    </tr>
+    <tr>
+        {% for class in classes %}
+            <td><button type="button" class="button {{ class }}" disabled>Button</button></td>
+        {% endfor %}
+        <th>button:disabled</th>
+    </tr>
+    <tr>
+        {% for class in classes %}
+            <td><button type="button" class="button {{ class }} is-disabled">Button</button></td>
+        {% endfor %}
+        <th>button.is-disabled</th>
+    </tr>
+    <tr>
+        {% for class in classes %}
+            <td><a href="" class="button {{ class }}">Button</a></td>
+        {% endfor %}
+        <th>a</th>
+    </tr>
+    <tr>
+        {% for class in classes %}
+            <td><a href="" class="button {{ class }} is-disabled">Button</a></td>
+        {% endfor %}
+        <th>a.disabled</th>
+    </tr>
+</table>
+
+<p>
+    <button type="button" class="button button-primary large">Button with long text for testing purpose</button>
+</p>
