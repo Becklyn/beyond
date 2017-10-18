@@ -1,17 +1,17 @@
 {
-  "name": "beyond-framework",
-  "version": "0.0.2",
-  "description": "Layout framework used by Becklyn",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Becklyn/beyond.git"
-  },
-  "homepage": "https://github.com/Becklyn/beyond",
-  "license": "BSD-3-Clause",
-  "devDependencies": {
-    "kaba": "^1.1.1"
-  },
-  "dependencies": {
-    "samos": "git@github.com:Becklyn/samos.git#232606fe29142fb0ad64ce3dc2a652c14b0a20a5"
-  }
+    "name": "beyond-framework",
+    "version": "0.0.2",
+    "description": "Layout framework used by Becklyn",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Becklyn/beyond.git"
+    },
+    "homepage": "https://github.com/Becklyn/beyond",
+    "license": "BSD-3-Clause",
+    "devDependencies": {
+        "kaba": "^2.0.2"
+    },
+    "dependencies": {
+        "samos": "Becklyn/samos#612b7cf66a7756522445abd17d46156fb9f50af8"
+    }
 }
