@@ -1,0 +1,40 @@
+@import "../helper/variables";
+
+.pagination {
+    display: flex;
+    flex-wrap: nowrap;
+
+    li + li {
+        margin-left: .5rem;
+    }
+
+    a,
+    span,
+    button {
+        padding: .75rem;
+        display: block;
+    }
+
+    a,
+    button {
+        &:hover {
+            color: $fg-primary;
+        }
+    }
+
+    .is-active span {
+        cursor: default;
+        color: $fg-primary;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: .5rem;
+            right: .5rem;
+            height: .2rem;
+            background-color: $fg-primary;
+        }
+    }
+}
