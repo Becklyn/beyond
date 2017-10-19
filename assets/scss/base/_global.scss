@@ -1,5 +1,7 @@
+@import "../helper/mixins";
+
 body {
-    font-family: "Roboto Mono", monospace;
+    @include system-fonts("Roboto Mono");
     font-weight: 500;
     font-size: 1.2rem;
 }
