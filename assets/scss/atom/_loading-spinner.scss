@@ -1,0 +1,48 @@
+@import "../helper/variables";
+
+@keyframes loading-spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(270deg); }
+}
+
+.loading-spinner {
+    $duration: 1.4s;
+    $offset: 320%;
+    $size: 5rem;
+    animation: loading-spinner $duration linear infinite;
+    width: $size;
+    height: $size;
+    vertical-align: middle;
+
+    circle {
+        fill: none;
+        stroke: $fg-primary;
+        stroke-dasharray: $offset;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+        transform-origin: center;
+        stroke-width: 3;
+        animation: dash $duration ease-in-out infinite;
+    }
+
+    @keyframes dash {
+        0% {
+            stroke-dashoffset: $offset;
+        }
+
+        50% {
+            stroke-dashoffset: $offset/4;
+            transform: rotate(135deg);
+        }
+
+        100% {
+            stroke-dashoffset: $offset;
+            transform: rotate(450deg);
+        }
+    }
+
+    &.is-small {
+        width: 3rem;
+        height: 3rem;
+    }
+}

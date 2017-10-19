@@ -17,6 +17,7 @@
     background-color: $color-light;
     border: 1px solid $color-dark-gray;
     touch-action: manipulation;
+    vertical-align: middle;
 
     &.is-disabled,
     &:disabled {
